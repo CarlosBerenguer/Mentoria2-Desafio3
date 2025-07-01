@@ -42,20 +42,13 @@ describe('Pesquisar', ()=> {
     
     it('Ao informar o CPF que não existe, teremos uma mensagem de cpf não encontrado', ()=>{
         //Arrange
-            const cpf = '90987654321';
-            const nomeEsperado = 'Barba Negra';
-            const cpfEsperado = '90987654321';
-            const primeiraFrutaFavoritaEsperada = 'Yami Yami No Mi';
-            const segundaFrutaFavoritaEsperada = 'Gura Gura No Mi';
+            const cpf = '99999999';
+            const nomeEsperado = 'Esse CPF não consta na nossa base de pessoas';
 
         //Act
             const pessoa = pesquisarPessoaPorCPF(cpf)
 
         //Assert
-        strictEqual(pessoa.nome, nomeEsperado)
-        strictEqual(pessoa.cpf, cpfEsperado )
-        strictEqual(pessoa.frutasFavoritas[0], primeiraFrutaFavoritaEsperada)
-        strictEqual(pessoa.frutasFavoritas[1], segundaFrutaFavoritaEsperada)
-        
+        strictEqual(pessoa, nomeEsperado)        
     })
 })

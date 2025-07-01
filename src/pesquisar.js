@@ -18,6 +18,8 @@ function pesquisarPessoaPorCPF(cpf){
             return pessoas[indice]
         }
     }
+
+    return 'Esse CPF não consta na nossa base de pessoas'
 }
 
 module.exports = {
